@@ -25,7 +25,7 @@ def _convert_screen_size(size: float) -> float:
 
 
 def _extract_processor(text: str) -> str:
-    """Categorise a CPU string into a high-level processor group."""
+    """Categorize a CPU string into a high-level processor group."""
     if text in ("Intel Core i7", "Intel Core i5", "Intel Core i3"):
         return text
     if text.split()[0] == "Intel":
