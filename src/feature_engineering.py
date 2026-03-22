@@ -90,7 +90,7 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
         "HBD": r"(\d+(?:\.\d+)?(?:GB|TB))\s+Hybrid",
     }
     for col in ("SSD", "HDD", "FS", "HBD"):
-        df[col] = 0
+        df[col] = "0"
     for pattern_type, pattern in patterns.items():
         for idx, row in df.iterrows():
             match = re.search(pattern, row["Memory"])
